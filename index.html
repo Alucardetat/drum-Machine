@@ -5,11 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Drum Machine</title>
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="tip">
-        (Click anywhere to hear sound...)
+        (Click the checkboxes to add or remove instruments.)
     </div>
 
     <div class="metronome">
@@ -31,7 +32,16 @@
             <label for="kick-drum">Kick drum</label>
             <input type="number" id="kick-drum-timing" placeholder="Timing">
         </div>
-        <!-- Repeat for snare drum and hi-hat -->
+        <div>
+            <input type="checkbox" id="snare-drum" value="snare-drum">
+            <label for="snare-drum">Snare drum</label>
+            <input type="number" id="snare-drum-timing" placeholder="Timing">
+        </div>
+        <div>
+            <input type="checkbox" id="hi-hat" value="hi-hat">
+            <label for="hi-hat">Hi-hat</label>
+            <input type="number" id="hi-hat-timing" placeholder="Timing">
+        </div>
     </div>
 
     <div class="metronome-count">1</div>

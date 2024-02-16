@@ -7,7 +7,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: none;
+    margin: 0;
     flex-direction: column;
     background-color: #81b29a;
 }
@@ -53,9 +53,17 @@ body {
 }
 
 @keyframes tick {
-    0%   { transform: rotate(-30deg); }
-    50%  { transform: rotate(30deg);  }
-    100% { transform: rotate(-30deg); }
+    0% {
+        transform: rotate(-30deg);
+    }
+
+    50% {
+        transform: rotate(30deg);
+    }
+
+    100% {
+        transform: rotate(-30deg);
+    }
 }
 
 .arm {
@@ -69,4 +77,24 @@ body {
     left: 165px;
     transform-origin: bottom center;
     animation: tick 1200ms ease-in-out infinite;
+}
+
+.instrument-controls {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.instrument-controls div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type="checkbox"] {
+    margin-bottom: 5px;
+}
+
+input[type="number"] {
+    width: 40px;
 }
