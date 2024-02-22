@@ -9,7 +9,7 @@ body {
     justify-content: center;
     margin: 0;
     flex-direction: column;
-    background-color: #81b29a;
+    background-image: linear-gradient( to top right, rgba(79,51,176,1.0),rgba(210,53,165));
 }
 
 .tip {
@@ -17,6 +17,7 @@ body {
     font-weight: bold;
     margin: 24px;
     font-family: 'Courier New', Courier, monospace;
+    color: #071115;
 }
 
 .metronome {
@@ -27,29 +28,29 @@ body {
 }
 
 .background-left {
-    border-bottom: 400px solid #e07a5f;
+    border-bottom: 400px solid #071115;
     border-left: 100px solid transparent;
 }
 
 .background-center {
     flex: 1;
-    background-color: #f2cc8f;
+    background-color: #1b2f38;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .background-right {
-    border-bottom: 400px solid #e07a5f;
+    border-bottom: 400px solid #071115;
     border-right: 100px solid transparent;
 }
 
 .core {
     flex: 1;
     width: 30%;
-    background-color: #f4f1de;
+    background-color: #071115;
     margin: 24px 0;
-    border: 6px dashed #e07a5f;
+    border: 6px dashed #aa00a4;
 }
 
 @keyframes tick {
@@ -89,12 +90,27 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: #071115
 }
+
+.instrument-controls label {
+    color: #071115;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
 
 input[type="checkbox"] {
     margin-bottom: 5px;
+    color: #071115;
 }
 
 input[type="number"] {
     width: 40px;
+    background-color: transparent;
+    color: #071115;
+}
+
+input[type="number"]::placeholder {
+    color: #071115;
 }

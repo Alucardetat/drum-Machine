@@ -12,7 +12,12 @@ function update() {
 
   const metronomeCheckbox = document.querySelector('#metronome');
   const kickDrumCheckbox = document.querySelector('#kick-drum');
+  const snareDrumCheckbox = document.querySelector('#snare-drum'); // Added
+  const hiHatCheckbox = document.querySelector('#hi-hat'); // Added
+
   const kickDrumTimingInput = document.querySelector('#kick-drum-timing');
+  const snareDrumTimingInput = document.querySelector('#snare-drum-timing'); // Added
+  const hiHatTimingInput = document.querySelector('#hi-hat-timing'); // Added
 
   if (metronomeCheckbox.checked) {
     playMetronomeSound(metronomeCount);
@@ -21,6 +26,15 @@ function update() {
   if (kickDrumCheckbox.checked && Number(kickDrumTimingInput.value) === metronomeCount) {
     kickDrum.play();
   }
+
+  if (snareDrumCheckbox.checked && Number(snareDrumTimingInput.value) === metronomeCount) {
+    snareDrum.play();
+  }
+
+  if (hiHatCheckbox.checked && Number(hiHatTimingInput.value) === metronomeCount) {
+    hiHat.play();
+  }
+
   updateMetronomeCount(metronomeCount);
 }
 
